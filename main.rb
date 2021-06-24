@@ -1,9 +1,9 @@
 class Brave
-  def initialize
-    @name = "テリー"
-    @hp = 500
-    @offense = 150
-    @defense = 100
+  def initialize(**params)
+    @name = params[:name]
+    @hp = params[:hp]
+    @offense = params[:offense]
+    @defense = params[:defense]
   end
 
   def name
@@ -23,7 +23,7 @@ class Brave
   end
 end
 
-brave = Brave.new
+brave = Brave.new(name: "テリー", hp: 500, offense: 150, defense: 100)
 
 puts <<~TEXT
 NAME：#{brave.name}
