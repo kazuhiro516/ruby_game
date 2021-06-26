@@ -26,6 +26,13 @@ puts "#{brave.name}はダメージを受けた!　残りHPは#{brave.hp}だ"
 class Monster
   attr_reader :name, :offense, :defense
   attr_accessor :hp
+
+  def initialize(**params)
+    @name = params[:name]
+    @hp = params[:hp]
+    @offense = [:offense]
+    @defense = params[:defense]
+  end
 end
 
 monster = Monster.new(name: "スライム", hp: 250, offense: 200, defense: 100)
