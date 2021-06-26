@@ -22,3 +22,8 @@ TEXT
 
 brave.hp -= 30
 puts "#{brave.name}はダメージを受けた!　残りHPは#{brave.hp}だ"
+
+class Monster
+  attr_reader :name, :offense, :defense
+  attr_accessor :hp
+end
