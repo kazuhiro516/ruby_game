@@ -27,3 +27,5 @@ class Monster
   attr_reader :name, :offense, :defense
   attr_accessor :hp
 end
+
+monster = Monster.new(name: "スライム", hp: 250, offense: 200, defense: 100)
