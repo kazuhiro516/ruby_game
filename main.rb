@@ -10,7 +10,13 @@ class Brave
   end
 
   def attack(monster)
-    puts "テスト#{monster.name}"
+    puts "#{@name}の攻撃"
+
+    damage = @offense - monster.defense
+    monster.hp -= damage
+
+    puts "#{monster.name}は#{damage}のダメージを受けた"
+    puts "#{monster.name}の残りHPは#{monster.hp}だ"
   end
 
 end
@@ -19,7 +25,7 @@ end
 class Monster
   attr_reader :name, :offense, :defense
   attr_accessor :hp
-  
+
   def initialize(**params)
     @name = params[:name]
     @hp = params[:hp]
